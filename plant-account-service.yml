@@ -1,0 +1,24 @@
+server:
+  port: 7777
+spring:
+  application:
+    name: account-service
+  datasource:
+    url: jdbc:h2:mem:testbd
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  sql:
+    init:
+      data-locations: classpath*:data.sql
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
