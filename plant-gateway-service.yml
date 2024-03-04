@@ -6,8 +6,8 @@ spring:
   cloud:
     gateway:
       routes: 
-      - id: plant-account-service
-        uri: lb://plant-account-service
+      - id: account-service
+        uri: lb://account-service
         predicates: 
         - Path=/account/**
       - id: plant-service
